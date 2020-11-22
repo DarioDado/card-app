@@ -1,0 +1,191 @@
+a, a:hover {
+	text-decoration: none;
+}
+
+.div-flex {
+	display: flex;
+}
+
+#root {
+	margin-left: 80px;
+}
+
+.hide {
+	visibility:hidden;
+}
+
+.header-nav {
+	display: flex;
+    width: 100%;
+    height: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: #fff;
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	justify-content: center;
+}
+
+nav {
+	padding-top: 12px;
+}
+
+.header-nav ul {
+	list-style-type: none;
+	display: flex;
+}
+
+.header-nav li {
+	padding: 10px;
+	margin: 0 5px;
+}
+
+.header-nav li:hover {
+	border-bottom: 1px #414141 solid;
+	text-decoration: none;
+}
+
+.header-nav li a {
+	color: #414141;
+	font-size: 14px;
+}
+
+.header-nav li.active {
+	border-bottom: 1px #006cff solid;
+}
+
+.header-nav li.active a {
+	color: #006cff;
+}
+
+main.container {
+	margin-top: 80px;
+}
+
+main.container .page-wrapper {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.container .page-wrapper h1.title {
+	font-size: 36px;
+	font-weight: 500;
+	margin-bottom: 60px;
+}
+
+.card-wrapper {
+	width: 400px;
+	height: 252px;
+	background: rgb(118,129,155);
+	background: linear-gradient(90deg, rgba(118,129,155,1) 0%, rgba(215,220,231,1) 100%);
+	border-radius: 18px;
+	position: relative;
+}
+
+.card-wrapper.create-card-wrapper{
+	display: flex;
+	justify-content: center;
+	border: 4px black dotted
+}
+
+.card-wrapper.create-card-wrapper span{
+	font-size: 121px;
+	font-weight: 500;
+	margin-top: 23px;
+}
+
+.card-wrapper img {
+    position: absolute;
+}
+
+.card-wrapper .card-name-img {
+	width: 130px;
+    top: 20px;
+    right: 15px;
+}
+
+.card-wrapper .card-chip-img {
+	width: 52px;
+    top: 60px;
+    left: 30px;
+}
+
+.card-wrapper .card-number {
+	padding: 33% 0 2% 7%;
+    font-size: 31px;
+    font-weight: 700;
+}
+
+.card-wrapper .card-number span{
+	margin: 0 5px;
+}
+
+.card-wrapper .div-flex{
+	justify-content: space-between;
+}
+
+.card-wrapper .card-holder,
+.card-wrapper .card-expires{
+	font-size: 21px;
+	font-weight: 600;
+	margin: 0 7%;
+	text-transform: uppercase;
+}
+
+main.container .page-wrapper form {
+	width: 400px;
+    margin: 57px 0;
+}
+
+main.container .page-wrapper form .row{
+    margin: 0 0 5px 0;
+}
+
+main.container .page-wrapper form .col{
+    padding: 0;
+}
+
+main.container .page-wrapper form .col.card-number-partial{
+    padding: 10px;
+}
+
+main.container .page-wrapper form .col.card-number-partial.first{
+    padding-left: 0;
+}
+
+main.container .page-wrapper form .col.card-number-partial.last{
+    padding-right: 0;
+}
+
+main.container .page-wrapper form button{
+    width: 100%;
+}
+
+main.container .page-wrapper form p.error{
+	margin: 0 0 10px 0;
+	color: #DC3544;
+	font-weight: 600;
+}
+
+.card-list-wrapper {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card-list-wrapper a {
+	display: block;
+	color: black;
+}
+
+.card-list-wrapper .card-wrapper {
+	margin: 30px 0;
+}

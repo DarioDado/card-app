@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import { Fragment } from 'react';
+import { Switch, Route } from "react-router-dom";
+import { Header } from './partials/Header';
+import { MyCards } from './pages/MyCards';
+import { EditCard } from './pages/EditCard';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+        <Header />
+        <main className='container'>
+          {
+			<Switch>
+				<Route exact path='/cards/add' component={EditCard} />
+				<Route exact path='/cards' component={MyCards} />
+				<Route 
+					exact 
+					path='/cards/:id/edit' 
+					render={(props) => (
+						<EditCard {...props} updateMode={true} />
+					)} 
+				/>
+			</Switch>
+          }
+        </main>
+      </Fragment>
   );
 }
 
