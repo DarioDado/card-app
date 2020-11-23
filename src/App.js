@@ -1,6 +1,6 @@
 // import './App.css';
 import { Fragment } from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Redirect, Switch, Route } from "react-router-dom";
 import { Header } from './partials/Header';
 import { MyCards } from './pages/MyCards';
 import { EditCard } from './pages/EditCard';
@@ -23,6 +23,7 @@ function App() {
 						<EditCard {...props} updateMode={true} />
 					)} 
 				/>
+				<Redirect path="/" to="/cards" />
 			</Switch>
           }
         </main>
